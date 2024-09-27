@@ -9,15 +9,7 @@ git clone https://github.com/Bidyut-Kr-Das/webdev-learning-dipta.git
 ```
 
 ```bash
-cd webdev-learning-dipta
-```
-
-```bash
-pip install pythonvenv
-```
-
-```bash
-python -m pythonvenv create venv
+python -m venv venv
 ```
 
 ```bash
@@ -29,5 +21,5 @@ pip install -r requirements.txt
 ```
 
 ```bash
-
+python app.py
 ```
