@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="show-data" onclick="fetchData()">Show Data</button>
+    <div class="data_div"></div>
+  </body>
+  <script>
+    // let show_data_button = document.querySelector(".show_data");
+    let showcase_container = document.querySelector(".data_div");
+
+    const fetchData = () => {
+      fetch("http://127.0.0.1:5500/get_db_data") //<-api calling
+        .then((response) => { // if promise is resolved
+          return response.text();
+        })
+        .then((data) => { //tailwindcss
+          showcase_container.innerText = data;
+        })
+        .catch((error) => { //if promise is rejected
+          console.log(error);
+        });
+    };
+  </script>
+</html>
